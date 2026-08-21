@@ -1,0 +1,3 @@
+import {NextResponse} from "next/server"; import {diagnose} from "@/lib/diagnosis"; import {saveDiagnosis} from "@/lib/db"; import type {DiagnosisRequest} from "@/lib/types";
+export const runtime="nodejs";
+export async function POST(req:Request){try{const input=await req.json() as DiagnosisRequest;if(!input.dtc?.trim()&&!input.symptom?.trim())return NextResponse.json({error:"dtc_or_symptom_required"},{status:400});input.dtc=(input.dtc||"").trim().toUpperCase();const result=await diagnose(input);const saved=await saveDiagnosis(input,result);return NextResponse.json({...result,savedToDatabase:saved})}catch(e){console.error(e);return NextResponse.json({error:"diagnosis_failed"},{status:500})}}

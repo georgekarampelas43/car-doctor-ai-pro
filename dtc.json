@@ -1,0 +1,160 @@
+{
+  "P0300": {
+    "code": "P0300",
+    "title": "Random/Multiple Cylinder Misfire Detected",
+    "system": "Ignition / combustion",
+    "severity": "high",
+    "description": "Misfires have been detected on multiple or random cylinders.",
+    "commonCauses": [
+      "Spark plugs or ignition coils",
+      "Injector or fuel delivery fault",
+      "Vacuum / intake leak",
+      "Low fuel pressure",
+      "Compression or timing issue"
+    ],
+    "firstChecks": [
+      "Read misfire counters and freeze-frame",
+      "Inspect plugs and coil boots",
+      "Check fuel trims and intake leaks",
+      "Verify fuel pressure",
+      "Compression/leak-down if needed"
+    ]
+  },
+  "P0171": {
+    "code": "P0171",
+    "title": "System Too Lean - Bank 1",
+    "system": "Fuel / air metering",
+    "severity": "medium",
+    "description": "Bank 1 mixture is lean beyond the ECU correction range.",
+    "commonCauses": [
+      "Vacuum/intake leak",
+      "MAF error or contamination",
+      "Low fuel pressure",
+      "Injector restriction",
+      "Exhaust leak before sensor"
+    ],
+    "firstChecks": [
+      "Check STFT/LTFT",
+      "Smoke-test intake",
+      "Check MAF readings",
+      "Verify fuel pressure"
+    ]
+  },
+  "P0420": {
+    "code": "P0420",
+    "title": "Catalyst Efficiency Below Threshold - Bank 1",
+    "system": "Emissions / catalyst",
+    "severity": "medium",
+    "description": "Catalyst efficiency on bank 1 is below threshold.",
+    "commonCauses": [
+      "Aged catalyst",
+      "Exhaust leak",
+      "Misfire or mixture fault",
+      "O2 sensor issue",
+      "Oil/coolant contamination"
+    ],
+    "firstChecks": [
+      "Repair misfire/fuel trim faults first",
+      "Check exhaust leaks",
+      "Compare upstream/downstream O2 signals",
+      "Verify catalyst operation"
+    ]
+  },
+  "P0299": {
+    "code": "P0299",
+    "title": "Turbo/Supercharger Underboost",
+    "system": "Forced induction",
+    "severity": "high",
+    "description": "Actual boost is below commanded boost.",
+    "commonCauses": [
+      "Boost leak",
+      "Wastegate/VGT control fault",
+      "Vacuum/control leak",
+      "Turbo wear",
+      "MAP/boost sensor error"
+    ],
+    "firstChecks": [
+      "Pressure/smoke-test charge system",
+      "Compare requested vs actual boost",
+      "Test actuator/solenoid",
+      "Inspect turbo condition"
+    ]
+  },
+  "P2002": {
+    "code": "P2002",
+    "title": "DPF Efficiency Below Threshold",
+    "system": "Diesel emissions",
+    "severity": "high",
+    "description": "DPF efficiency/loading behavior is outside the expected range.",
+    "commonCauses": [
+      "High soot/ash loading",
+      "Failed regeneration",
+      "Differential pressure sensor/hoses",
+      "Excess soot from engine fault"
+    ],
+    "firstChecks": [
+      "Read soot/ash values",
+      "Check differential pressure",
+      "Inspect sensor hoses",
+      "Verify regeneration conditions"
+    ]
+  },
+  "P2463": {
+    "code": "P2463",
+    "title": "DPF Soot Accumulation",
+    "system": "Diesel emissions",
+    "severity": "high",
+    "description": "DPF soot accumulation is above the calibrated threshold.",
+    "commonCauses": [
+      "Interrupted regeneration",
+      "Excess soot production",
+      "Pressure sensor issue",
+      "Temperature issue preventing regeneration"
+    ],
+    "firstChecks": [
+      "Read soot mass and regen history",
+      "Check EGT sensors",
+      "Check differential pressure",
+      "Repair root cause before forced regeneration"
+    ]
+  },
+  "P0087": {
+    "code": "P0087",
+    "title": "Fuel Rail/System Pressure Too Low",
+    "system": "Fuel pressure",
+    "severity": "high",
+    "description": "Fuel rail pressure is below commanded value.",
+    "commonCauses": [
+      "Restricted fuel filter",
+      "Weak pump",
+      "Leak",
+      "Pressure control valve",
+      "Rail pressure sensor"
+    ],
+    "firstChecks": [
+      "Compare commanded vs actual pressure",
+      "Check low-side supply",
+      "Inspect filter",
+      "Return/leak-off test"
+    ]
+  },
+  "U0100": {
+    "code": "U0100",
+    "title": "Lost Communication With ECM/PCM",
+    "system": "Network / CAN",
+    "severity": "high",
+    "description": "Communication with the engine control module was lost.",
+    "commonCauses": [
+      "Low voltage",
+      "ECM power/ground issue",
+      "CAN wiring fault",
+      "Module failure"
+    ],
+    "firstChecks": [
+      "Check battery voltage",
+      "Verify ECM powers/grounds",
+      "Check CAN resistance/voltages",
+      "Inspect network connectors"
+    ]
+  }
+}
